@@ -22,9 +22,9 @@ A comprehensive GitHub Action for deploying container images to Kubernetes or Re
 |------|----------|---------|-------------|
 | `image` | ✅ | - | Container image to deploy (e.g., `us.icr.io/namespace/app:tag`) |
 | `cluster-type` | ❌ | `kubernetes` | Cluster type: `kubernetes` or `openshift` |
-| `kubeconfig` | ❌* | - | Kubeconfig content (base64 encoded or plain text) |
-| `ibmcloud-apikey` | ❌* | - | IBM Cloud API key (for IBM Cloud clusters) |
-| `cluster-name` | ❌* | - | IBM Cloud cluster name (required with `ibmcloud-apikey`) |
+| `kubeconfig` | ❌ * | - | Kubeconfig content (base64 encoded or plain text) |
+| `ibmcloud-apikey` | ❌ * | - | IBM Cloud API key (for IBM Cloud clusters) |
+| `cluster-name` | ❌ * | - | IBM Cloud cluster name (required with `ibmcloud-apikey`) |
 | `cluster-region` | ❌ | `us-south` | IBM Cloud cluster region |
 | `namespace` | ❌ | `default` | Kubernetes namespace for deployment |
 | `deployment-name` | ✅ | - | Name of the deployment |
@@ -48,7 +48,7 @@ A comprehensive GitHub Action for deploying container images to Kubernetes or Re
 | `ingress-host` | ❌ | - | Ingress hostname (Kubernetes only) |
 | `ingress-tls` | ❌ | `false` | Enable TLS for ingress |
 
-**Note:** ❌* indicates conditionally required - either `kubeconfig` OR (`ibmcloud-apikey` + `cluster-name`) must be provided.
+**Note:** ❌ * indicates conditionally required - either `kubeconfig` OR (`ibmcloud-apikey` + `cluster-name`) must be provided.
 
 ## Outputs
 
